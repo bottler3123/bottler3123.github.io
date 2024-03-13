@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@chakra-ui/react'
 
-function box() {
+function backgroundDiv() {
   return (
     <Box bg='blur'>
         box test
@@ -9,4 +9,4 @@ function box() {
   )
 }
 
-export default box
+export default backgroundDiv;
