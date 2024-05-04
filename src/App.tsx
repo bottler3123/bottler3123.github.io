@@ -1,26 +1,42 @@
 import React from 'react';
+import BackgroundDiv from './components/Background';
 import MainPage from './pages/MainPage';
 import PortfolioPage from './pages/PortfolioPage';
-import PortfolioDetailPage from './pages/PortfolioDetailPage';
-import backgroundDiv from './components/backgroundDiv';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
-import { RootState } from '.';
 
 function App() {
-  const bgnum = useSelector((state : RootState) => state.background.number);
+  const pageState = useSelector((state: any) => state.page.pageState);
 
   return (
-      <BrowserRouter>
-        <div>
-          {bgnum}
-          <Routes>
-              <Route path="/" element={<MainPage />} />
-              <Route path="/portfolio" element={<PortfolioPage />} />
-              <Route path="/portfolioDetail" element={<PortfolioDetailPage />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+    <div>
+      <BackgroundDiv></BackgroundDiv>
+      <AnimatePresence mode='wait'>
+        {pageState === "main" && (
+          <motion.div
+            key="main"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <MainPage/>
+          </motion.div>
+        )}
+        {pageState === "portfolio" && (
+          <motion.div
+            key="portfolio"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1}}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <PortfolioPage/>
+          </motion.div>
+        )}
+        
+      </AnimatePresence>
+    </div>  
   );
 }
 

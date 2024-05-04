@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react';
+import theme from './styles/GlobalStyles';
 import { Provider, useDispatch } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { rootReducer } from './modules/rootReducer';
@@ -11,7 +12,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const store = configureStore({
+export const store = configureStore({
   reducer : rootReducer
 });
 
@@ -22,7 +23,7 @@ export const useAppDispatch = () => useDispatch<AppDispatch>()
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <App />
       </ChakraProvider>
     </Provider>

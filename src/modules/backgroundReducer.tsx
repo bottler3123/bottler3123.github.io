@@ -8,7 +8,7 @@ const initialState: backgroundState = {
     number : 0,
 };
 
-export const backgoundSlice = createSlice({
+const backgoundSlice = createSlice({
     name: 'background',
     initialState,
     reducers: {
