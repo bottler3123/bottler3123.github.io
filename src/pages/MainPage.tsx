@@ -3,11 +3,11 @@ import { Box, Center, Grid, GridItem, Text } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux'
 import { movePage } from '../modules/pageReducer';
 import { motion } from 'framer-motion';
-import { ReactComponent as JavaLogo } from '../assets/java-4-logo-svgrepo-com.svg';
-import { ReactComponent as JsLogo } from '../assets/javascript-svgrepo-com.svg';
-import { ReactComponent as ReactLogo } from '../assets/react-svgrepo-com.svg';
-import { ReactComponent as VueLogo } from '../assets/vue-svgrepo-com.svg';
-import { ReactComponent as TsLogo } from '../assets/typescript-official-svgrepo-com.svg';
+import { ReactComponent as JavaLogo } from '../assets/java-4-logo-svgrepo-com.svg?react';
+import { ReactComponent as JsLogo } from '../assets/javascript-svgrepo-com.svg?react';
+import { ReactComponent as ReactLogo } from '../assets/react-svgrepo-com.svg?react';
+import { ReactComponent as VueLogo } from '../assets/vue-svgrepo-com.svg?react';
+import { ReactComponent as TsLogo } from '../assets/typescript-official-svgrepo-com.svg?react';
 
 function MainPage() {
     const dispatch = useDispatch();

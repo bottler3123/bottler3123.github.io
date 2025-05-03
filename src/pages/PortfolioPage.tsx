@@ -5,14 +5,14 @@ import { movePage } from '../modules/pageReducer';
 import { motion } from 'framer-motion';
 import mangwol from '../assets/mangwol.png';
 import bottle from '../assets/free-icon-milk-684631.png';
-import { ReactComponent as Etjude } from '../assets/Etjude.svg';
-import { ReactComponent as JavaLogo } from '../assets/java-icon.svg';
-import { ReactComponent as FlutterLogo } from '../assets/flutterio-icon.svg';
-import { ReactComponent as DartLogo } from '../assets/dartlang-icon.svg';
-import { ReactComponent as SpringLogo } from '../assets/springio-icon.svg';
-import { ReactComponent as FBLogo } from '../assets/firebase-icon.svg';
-import { ReactComponent as ReactLogo } from '../assets/reactjs-icon.svg';
-import { ReactComponent as TsLogo } from '../assets/typescriptlang-icon.svg';
+// import { ReactComponent as Etjude } from '../assets/Etjude.svg';
+// import { ReactComponent as JavaLogo } from '../assets/java-icon.svg';
+// import { ReactComponent as FlutterLogo } from '../assets/flutterio-icon.svg';
+// import { ReactComponent as DartLogo } from '../assets/dartlang-icon.svg';
+// import { ReactComponent as SpringLogo } from '../assets/springio-icon.svg';
+// import { ReactComponent as FBLogo } from '../assets/firebase-icon.svg';
+// import { ReactComponent as ReactLogo } from '../assets/reactjs-icon.svg';
+// import { ReactComponent as TsLogo } from '../assets/typescriptlang-icon.svg';
 import bottler from '../assets/bottle_portfolio.png';
 
 
@@ -256,7 +256,7 @@ function PortfolioPage() {
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     <Center h={'100%'}>
-                                        <Etjude width={'50%'} />
+                                        {/* <Etjude width={'50%'} /> */}
                                     </Center>
                                 </motion.div>
                             </Box>
@@ -299,7 +299,7 @@ function PortfolioPage() {
                                 gap={'5%'}
                                 paddingRight={'50%'}
                                 >
-                                    <GridItem>
+                                    {/* <GridItem>
                                         <DartLogo width={'100%'} />
                                     </GridItem>
                                     <GridItem >
@@ -313,7 +313,7 @@ function PortfolioPage() {
                                     </GridItem>
                                     <GridItem >
                                         <FBLogo width={'100%'} />
-                                    </GridItem>
+                                    </GridItem> */}
                             </Grid>
                         </Box>
                         <Box h={'20%'} display={'flex'} justifyContent="flex-end" paddingRight={'2%'}>
@@ -366,10 +366,10 @@ function PortfolioPage() {
                                 paddingRight={'50%'}
                                 >
                                     <GridItem>
-                                        <ReactLogo width={'100%'} />
+                                        {/* <ReactLogo width={'100%'} /> */}
                                     </GridItem>
                                     <GridItem >
-                                        <TsLogo width={'100%'} />
+                                        {/* <TsLogo width={'100%'} /> */}
                                     </GridItem>
                             </Grid>
                         </Box>
