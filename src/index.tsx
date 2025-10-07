@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { ChakraProvider } from '@chakra-ui/react';
-import theme from './styles/GlobalStyles';
 import { Provider, useDispatch } from 'react-redux';
+import { Provider as ChakraProvider } from "./components/ui/provider"
 import { configureStore } from '@reduxjs/toolkit';
 import { rootReducer } from './modules/rootReducer';
 
@@ -22,7 +21,7 @@ export const useAppDispatch = () => useDispatch<AppDispatch>()
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider>
         <App />
       </ChakraProvider>
     </Provider>
